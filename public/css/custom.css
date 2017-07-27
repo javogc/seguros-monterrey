@@ -1,0 +1,65 @@
+h1{
+	font-family: Open Sans;
+}
+
+body{
+	font-family: Open Sans;
+}
+.btn{
+	border-radius: 0;
+}
+
+.btn.btn-default{
+	background-color: #8ACA4B;
+	border-color: transparent;
+	border-radius: 0;
+}
+
+.btn-default{
+	color: white;
+}
+
+.navbar.navbar-default{
+	background-color: #323232;
+	border-radius: 0;
+	height: 70px;
+}
+
+h1{
+	text-align: center;
+}
+
+
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus{
+	background-color: #6A1383;
+}
+
+.navbar-default .navbar-nav > li > a{
+	color: white;
+	font-weight: bold; 
+	font-size: smaller;
+	text-align: center;
+}
+
+.navbar-default .navbar-brand{
+	color: white;
+}
+
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+    color: white;
+    font-size: smaller;
+    text-align: center;
+}
+
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus{
+	color: white;
+}
+
+.detail-button{
+	background-color: purple;
+}
+
+.dependency-button{
+	background-color: #E56D3B;
+	text-align: center;
+}
