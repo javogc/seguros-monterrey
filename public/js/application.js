@@ -92,7 +92,6 @@ garciac_comms = build_garciac_comms = function (session, comms) {
 	}
 }
 
-
 router = build_router()
 adapter = build_communication(router)
 sesh = build_session_handler(adapter)
