@@ -1,11 +1,11 @@
 require 'rubygems'
 require 'sinatra'
 require 'slim'
-require 'sinatra/asset_pipeline'
+# require 'sinatra/asset_pipeline'
 
 
 class Garciac < Sinatra::Base
-	register Sinatra::AssetPipeline
+	# register Sinatra::AssetPipeline
 	get '/' do
     File.read(File.join('public', 'js', 'index.js'))
 	  slim :index
