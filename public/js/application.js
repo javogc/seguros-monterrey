@@ -61,8 +61,10 @@ build_session_handler = function(communication) {
 			communication.post(command)
 			.success(function(response) {
 				session_token = response.auth_token
-				success_fn(response)
-			}).error(failure_fn)
+				if(success_fn) { success_fn(response)}
+			}).error(function (response) {
+				if(failure_fn) {failure_fn(response)}
+			})
 		},
 		get_session_token: function() {return session_token},
 		log_out: function() {
