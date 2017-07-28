@@ -1,52 +1,61 @@
-h3 Nuevo Procedimiento
-p Ecología
+.container.procedure_form
+	h3 Nuevo Procedimiento
+	p Ecología
 
-p I. Especifica el nombre que le asignarás al nuevo procedimiento
-.row
-	.form-group.col-md-6
-	  label for="usr"  Name:
-	  input#usr.form-control type="text" /
-p II. Especifica los requerimientos que necesita el procedimiento para que se cumpla
-
-h6 Requerimiento #1:
-.row
-	.form-group.col-md-6
+	p I. Especifica el nombre que le asignarás al nuevo procedimiento
+	.row
+		.form-group.col-md-6
+		  label for="usr"  Name:
 		  input#usr.form-control type="text" /
-	.col-md-2
-		a.btn.btn-info.allign-middle.detail-button href="/new-requirement" role="button"  Ver Detalle
-	.col-md-2
-		a.btn.btn-info.dependency-button href="" role="button"  Ver Dependencias
+	p II. Especifica los requerimientos que necesita el procedimiento para que se cumpla
 
-h6 Requerimiento #2:
-.row
-	.form-group.col-md-6
-		  input#usr.form-control type="text" /
-	.col-md-2
-		a.btn.btn-info.detail-button href="/new-requirement" role="button"  Ver Detalle
-	.container
-		.col-md-2
-	      a.btn.btn-info.dependency-button data-target="#myModal" data-toggle="modal" type="button"  Agregar Dependencias
-	      /! Modal
-	      #myModal.modal.fade role="dialog" 
-	        .modal-dialog
-	          /! Modal content
-	          .modal-content
-	            .modal-header
-	              button.close data-dismiss="modal" type="button"  &times;
-	              h4.modal-title Agregar Dependecias
-	            .modal-body
-	            	label.checkbox-inline
-	  							input type="checkbox" value="" 
-	  							| Option 1
-								label.checkbox-inline
-	  							input type="checkbox" value="" 
-	  							| Option 2
-								label.checkbox-inline
-	  							input type="checkbox" value="" 
-	  							| Option 3
-	            .modal-footer
-	              button.btn.btn-default data-dismiss="modal" type="button"  Close
-br/
-br/
-a.btn.btn-default href="" role="button"  Guardar Cambios
+	.row
+		.col-md-3
+			a.btn.btn-default href="" id="new_req" role="button"  Nuevo Requerimiento
+	.row
+		table.table
+			thead
+				th
+			tbody.list
 
+	/ h6 Requerimiento #1:
+	/ .row
+	/ 	.form-group.col-md-6
+	/ 		  input#usr.form-control type="text" /
+	/ 	.col-md-2
+	/ 		a.btn.btn-info.allign-middle.detail-button href="/new-requirement" role="button"  Ver Detalle
+	/ 	.col-md-2
+	/ 		a.btn.btn-info.dependency-button href="" role="button"  Ver Dependencias
+
+	/ h6 Requerimiento #2:
+	/ .row
+	/ 	.form-group.col-md-6
+	/ 		  input#usr.form-control type="text" /
+	/ 	.col-md-2
+	/ 		a.btn.btn-info.detail-button href="/new-requirement" role="button"  Ver Detalle
+	/ 	.container
+	/ 		.col-md-2
+	/ 	      a.btn.btn-info.dependency-button data-target="#myModal" data-toggle="modal" type="button"  Agregar Dependencias
+	/ 	      /! Modal
+	/ 	      #myModal.modal.fade role="dialog" 
+	/ 	        .modal-dialog
+	/ 	          /! Modal content
+	/ 	          .modal-content
+	/ 	            .modal-header
+	/ 	              button.close data-dismiss="modal" type="button"  &times;
+	/ 	              h4.modal-title Agregar Dependecias
+	/ 	            .modal-body
+	/ 	            	label.checkbox-inline
+	/ 	  							input type="checkbox" value="" 
+	/ 	  							| Option 1
+	/ 								label.checkbox-inline
+	/ 	  							input type="checkbox" value="" 
+	/ 	  							| Option 2
+	/ 								label.checkbox-inline
+	/ 	  							input type="checkbox" value="" 
+	/ 	  							| Option 3
+	/ 	            .modal-footer
+	/ 	              button.btn.btn-default data-dismiss="modal" type="button"  Close
+	/ br/
+	/ br/
+	a.btn.btn-default href="" role="button"  Guardar Cambios
