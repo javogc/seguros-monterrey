@@ -53,10 +53,11 @@ routes = function () {
 	}
 }
 
-core = function() {
+core = function(link, session) {
+	
 }
 
 garciac_routes = new routes()
 garciac_link = new communication(garciac_routes)
 session_handler = new session_handler(garciac_link)
-// garciac_core = new garciac_core(garciac_link, session_handler)
+garciac_core = new garciac_core(garciac_link, session_handler)
