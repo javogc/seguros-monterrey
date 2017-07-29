@@ -94,6 +94,16 @@ garciac_comms = build_garciac_comms = function (session, comms) {
 	}
 }
 
+$( "#user-save" ).click(function() {
+
+	garciac.log_in('ukko', '12345', function(){ 
+		garciac.post("users", {user: {name: $("#name").val(), mail:$("#mail").val() , password: $("#password").val() , password_confirmation: $("#password_confirmation").val() }})
+	})
+	
+});
+
+
+
 router = build_router()
 adapter = build_interface(router)
 sesh = build_session_handler(adapter)

@@ -1,13 +1,13 @@
 h4 Crear nuevo usuario
 .form-group
   label for="usr"  Nombre:
-  input#usr.form-control type="text" /
+  input#name type="text" /
 .form-group
   label for="usr"  Apellido:
-  input#usr.form-control type="text" /
+  input#lastname type="text" /
 .form-group
   label for="sel1"  Área:
-  select#sel1.form-control
+  select#select-area
     option Ecología
     option Desarrollo Urbano
     option Inspecciónes
@@ -17,5 +17,11 @@ h4 Crear nuevo usuario
   input#usr.form-control type="text" /
 .form-group
   label for="usr"  Correo Electrónico:
-  input#usr.form-control type="text" /
-a.btn.btn-info href="/user-created" role="button"  Guardar Usuario
+  input#mail type="text" /
+.form-group
+  label for="usr"  Contraseña:
+  input#password type="text" /  
+.form-group
+  label for="usr"  Confirmación de Contraseña:
+  input#password-confirmation type="text" /
+a.btn.btn-info#user-save href="#" role="button"  Guardar Usuario
