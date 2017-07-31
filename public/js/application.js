@@ -1,30 +1,29 @@
-build_router = function (target) {
+build_router = function () {
 	base_uri = 'http://localhost:3000/api'
 	return {
-		get_route: function (target) {
-			switch (target) {
+		get_route: function (route) {
+			switch (route.target) {
 				case 'login':
 					return base_uri + '/login'
 					break;
 				case 'users':
-					return base_uri + '/users'
+					return base_uri + '/users' + (route.id ? '/' + route.id : '')
 					break;
 				default:
 					break;
 			}
 		},
-		change_base_uri: function(new_base) {
+		set_base_uri: function(new_base) {
 			base_uri = new_base
 		}
 	}
 };
 
-build_interface = function(router) {
+build_channel = function(router) {
 	return {
 		ajax: function(command, type) {
-		route = command.route || router.get_route(command.target);
 		 	return $.ajax({
-		 	 	url: route,
+		 	 	url: command.route || router.get_route(command.target),
 		 	 	type: type,
 		 	 	dataType: 'json',
 		 	 	data: command.data,
@@ -36,6 +35,12 @@ build_interface = function(router) {
 		},
 		post: function (command) {
 			return this.ajax(command, 'POST')
+		},
+		patch: function(command) {
+			return this.ajax(command, 'PATCH')
+		},
+		delete: function(command) {
+			return this.ajax(command, 'DELETE')
 		}
 	}
 };
@@ -43,7 +48,6 @@ build_interface = function(router) {
 build_session_handler = function(communication) {
 	session_token = null;
 	build_login_command = function (user, password) {
-		// success_fn = function(response) { this.session_token = response.auth_token }.bind(this)
 		return {
 			data: { 
 				mail: user,
@@ -73,38 +77,70 @@ build_session_handler = function(communication) {
 				message: 'This function is not yet implemented'
 			}
 		}
-
 	}
 };
 
-garciac_comms = build_garciac_comms = function (session, comms) {
+communicator = function () {
+	router = build_router()
+	channel = build_channel(router)
+	session = build_session_handler(channel)
+
 	return {
 		log_in: function(mail, password, success_fn, failure_fn) {
 			session.log_in(mail, password, success_fn, failure_fn)
 		},
-		post: function (model, data) {
+
+		create: function (model, data) {
 			command = {
-				target: model,
+				target: {target: model},
 				data: data,
 				auth_token: session.get_session_token(),
 			}
 
-			return comms.post(command)
+			return channel.post(command)
+		},
+
+		index: function (model) {
+			command = {
+				target: {target: model},
+				auth_token: session.get_session_token()
+			}
+
+			return channel.get(command)
+		},
+
+		get: function (model, id) {
+			command = {
+				target: {target: model, id: id},
+				auth_token: session.get_session_token()
+			}
+
+			return channel.get(command)
+		},
+
+		update: function(model, id, data) {
+			command = {
+				target: {target: model, id: id},
+				data: data,
+				auth_token: session.get_session_token(),
+			}
+
+			return channel.patch(command)
+		},
+		delete: function (model, id) {
+			command = {
+				target: {target: model, id: id},
+				auth_token: session.get_session_token()
+			}
+
+			return channel.delete(command)
 		}
 	}
 }
 
-$( "#user-save" ).click(function() {
+garciac = communicator()
 
-	garciac.log_in('ukko', '12345', function(){ 
-		garciac.post("users", {user: {name: $("#name").val(), mail:$("#mail").val() , password: $("#password").val() , password_confirmation: $("#password_confirmation").val() }})
-	})
-	
-});
+log = function (response) {
+	console.log(response)
+}
 
-
-
-router = build_router()
-adapter = build_interface(router)
-sesh = build_session_handler(adapter)
-garciac = build_garciac_comms(sesh, adapter)
