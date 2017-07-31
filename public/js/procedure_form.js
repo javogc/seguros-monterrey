@@ -10,9 +10,9 @@ $(function(){
     $('.list').append(
         "<tr class='list-item' id='requirement_" + requirement_count + "'>" +
         "<td><input style='width: 100%' type='text'></td>" +
-        "<td><a class='btn btn-danger delete' id='delete_" + requirement_count + 
+        "<td class='text-center'><a class='btn btn-danger delete' id='delete_" + requirement_count + 
         "' href='#' role='button'>X</a></td>" +
-        "<td><a class='btn btn-success dependencies' id='dependencies_" + 
+        "<td><a class='btn btn-default dependencies' id='dependencies_" + 
         requirement_count + "' data-target='#dependency_modal' data-toggle='modal'" + 
         ">Dependencias</a></td></tr>"
       )
