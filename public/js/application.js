@@ -56,12 +56,14 @@ build_session_handler = function(communication) {
 
 
 	return {
-		log_in: function (user, password) {
+		log_in: function (user, password, success_fn, failure_fn) {
 			command = build_login_command(user, password)
 			communication.post(command)
 			.success(function(response) {
-				console.log('logged in!');
 				session_token = response.auth_token
+				if(success_fn) { success_fn(response)}
+			}).error(function (response) {
+				if(failure_fn) {failure_fn(response)}
 			})
 		},
 		get_session_token: function() {return session_token},
@@ -77,8 +79,8 @@ build_session_handler = function(communication) {
 
 garciac_comms = build_garciac_comms = function (session, comms) {
 	return {
-		log_in: function(mail, password) {
-			session.log_in(mail, password)
+		log_in: function(mail, password, success_fn, failure_fn) {
+			session.log_in(mail, password, success_fn, failure_fn)
 		},
 		post: function (model, data) {
 			command = {
@@ -91,6 +93,16 @@ garciac_comms = build_garciac_comms = function (session, comms) {
 		}
 	}
 }
+
+$( "#user-save" ).click(function() {
+
+	garciac.log_in('ukko', '12345', function(){ 
+		garciac.post("users", {user: {name: $("#name").val(), mail:$("#mail").val() , password: $("#password").val() , password_confirmation: $("#password_confirmation").val() }})
+	})
+	
+});
+
+
 
 router = build_router()
 adapter = build_interface(router)
