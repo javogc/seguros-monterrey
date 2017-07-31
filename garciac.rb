@@ -24,6 +24,10 @@ class Garciac < Sinatra::Base
 		slim :requirement
 	end
 
+	get'/user_index'do
+		slim :user_index
+	end
+
 	post '/' do
 	  @task =  params[:task]
 	  slim :task
