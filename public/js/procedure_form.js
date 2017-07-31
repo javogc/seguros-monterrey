@@ -73,17 +73,23 @@ $(function(){
 function load_dependencies (){
   for(key in requirement_hash){
     id = key.split('_')[1];
+    name = $('#' + key + ' td input').val();
+
+    if (name === ""){
+      name = "Sin nombre";
+    }
+
     if(key != 'requirement_' + current_requirement){
       if (requirement_hash['requirement_' + current_requirement]['dependencies'].includes(id)){
         $('.dep_list').append(
           "<tr class='dep_item' id='dep_" + id + "'>" +
-          "<td><input type='checkbox' checked='true'> Requirement " + id + "</input></td>"
+          "<td><input type='checkbox' checked='true'>" + name + "</input></td>"
         )
       }
       else {
         $('.dep_list').append(
           "<tr class='dep_item' id='dep_" + id + "'>" +
-          "<td><input type='checkbox'>Requirement " + id + "</input></td>"
+          "<td><input type='checkbox'>" + name + "</input></td>"
         )
       }
     }
