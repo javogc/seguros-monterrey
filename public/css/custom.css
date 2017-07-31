@@ -4,9 +4,23 @@ h1{
 
 body{
 	font-family: Open Sans;
+	overflow-x: hidden;
 }
+
 .btn{
 	border-radius: 0;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #f5f5f5;
+}
+
+.footer .container-fluid .text-muted {
+  margin: 10px 0;
 }
 
 .btn.btn-default{
