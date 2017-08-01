@@ -12,15 +12,15 @@ class Garciac < Sinatra::Base
 	  slim :procedures
 	end
 
-	get '/new-user' do
+	get '/new_user' do
 		slim :users
 	end
 
-	get'/user-created' do
+	get'/user_created' do
 		slim :user_created
 	end
 
-	get'/new-requirement'do
+	get'/new_requirement'do
 		slim :requirement
 	end
 
