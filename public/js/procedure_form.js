@@ -66,6 +66,9 @@ $(function(){
       temp['dependencies'] = requirement_hash[key].dependencies
       procedure.requirements.push(temp);
     }
+    procedure.full_procedure = true
+
+    garciac.create('procedures', procedure)
   });
 });
 
