@@ -1,27 +1,35 @@
-h4 Crear nuevo usuario
-.form-group
-  label for="usr"  Nombre:
-  input#name type="text" /
-.form-group
-  label for="usr"  Apellido:
-  input#lastname type="text" /
-.form-group
-  label for="sel1"  Área:
-  select#select-area
-    option Ecología
-    option Desarrollo Urbano
-    option Inspecciónes
-    option Bardas
-.form-group
-  label for="usr"  Puesto:
-  input#usr.form-control type="text" /
-.form-group
-  label for="usr"  Correo Electrónico:
-  input#mail type="text" /
-.form-group
-  label for="usr"  Contraseña:
-  input#password type="text" /  
-.form-group
-  label for="usr"  Confirmación de Contraseña:
-  input#password-confirmation type="text" /
-a.btn.btn-info#user-save href="#" role="button"  Guardar Usuario
+.user_form
+  h3 Nuevo usuario
+
+  p I. Especifica los datos principales del usuario.
+
+  .row
+    .col-md-6
+      label for="usr"  Nombre:
+      input#name.form-control type="text" /
+    .col-md-6
+      label for="usr"  Apellido:
+      input#lastname.form-control type="text" /
+    .col-md-6
+      label for="usr"  Correo Electrónico:
+      input#mail.form-control type="text" /
+    .col-md-6
+      label for="usr"  Contraseña:
+      input#password.form-control type="password" /  
+    .col-md-6
+      label for="usr"  Confirmación de Contraseña:
+      input#password-confirmation.form-control type="password" /
+  
+  br
+  p II. Especifica los datos de area y rol del usuario.
+
+  .row
+    .col-md-6
+      label for="select_area" Área:
+      select.form-control#area
+      label for="role"  Puesto:
+      select.form-control#role
+
+  .row style='margin-top: 15px;'
+    .col-md-12
+      a.btn.btn-default#user-save href="#" role="button"  Guardar Usuario
