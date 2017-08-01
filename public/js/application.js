@@ -9,6 +9,9 @@ build_router = function () {
 				case 'users':
 					return base_uri + '/users' + (route.id ? '/' + route.id : '')
 					break;
+				case 'procedures':
+					return base_uri + '/procedures' + (route.id ? '/' + route.id : '')
+					break;
 				default:
 					break;
 			}
@@ -139,6 +142,7 @@ communicator = function () {
 }
 
 garciac = communicator()
+garciac.log_in('ukko', '1234')
 
 log = function (response) {
 	console.log(response)
