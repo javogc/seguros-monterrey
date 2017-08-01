@@ -36,6 +36,11 @@ function user_index (response){
 
 function procedure_index (response){
   $.each(response, function(){
-    $('.list').append()
+    $('.list').append(
+      "<tr><td>" + this.id + "</td>" +
+      "<td>" + this.name + "</td>" +
+      "<td style='text-align: center'><a href='#'><span class='glyphicon glyphicon-trash' /></a></td>" +
+      "<td style='text-align: center'><a href='#'><span class='glyphicon glyphicon-pencil' /></a></td></tr>"
+      )
   });
 }
