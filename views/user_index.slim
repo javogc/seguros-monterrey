@@ -1,4 +1,4 @@
-.container
+.container.index#users
   h2 Lista de Usarios
   .table-responsive
     table.table
@@ -9,19 +9,8 @@
           th Apellido
           th Área
           th Rol
-          th Eliminar
-          th Editar
-          	
-      tbody
-        tr
-          td 1
-          td Patricio 
-          td Sanchez
-          td Ecología
-          td Auxiliar
-          td
-          	a.col-md-1 href="#" 
-    	    span.glyphicon.glyphicon-trash
-    	  td
-    	  	a.col-md-1 href="#" 
-    	    span.glyphicon.glyphicon-pencil
+          th style='text-align: center' Eliminar
+          th style='text-align: center' Editar    	
+      tbody.list
+
+  script src='js/index.js'
