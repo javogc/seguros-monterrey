@@ -1,7 +1,10 @@
- $( "#login-button" ).click(function() {
- 
- 	garciac.log_in('ukko', '12345', function(){ 
- 		garciac.post("users", {user: {name: $("#name").val(), mail:$("#mail").val() , password: $("#password").val() , password_confirmation: $("#password_confirmation").val() }})
- 	})
- 	
+$(function() {
+  $("#login-button").click(function(e) {
+    e.preventDefault();
+    user = $('#user').val();
+    password = $('#password').val();
+    garciac.log_in(user, password, function(){
+      window.location = '/';
+    });
+  });
 });
