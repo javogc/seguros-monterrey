@@ -67,18 +67,22 @@ build_session_handler = function(communication) {
 			command = build_login_command(user, password)
 			communication.post(command)
 			.success(function(response) {
-				session_token = response.auth_token
+				session_token = response.auth_token;
+        localStorage.setItem('auth_token', session_token);
 				if(success_fn) { success_fn(response)}
 			}).error(function (response) {
 				if(failure_fn) {failure_fn(response)}
 			})
 		},
-		get_session_token: function() {return session_token},
+		get_session_token: function() {
+      return localStorage.getItem('auth_token');
+    },
 		log_out: function() {
-			throw {
-				name: 'NotImplemented',
-				message: 'This function is not yet implemented'
-			}
+      localStorage.clear();
+			// throw {
+			// 	name: 'NotImplemented',
+			// 	message: 'This function is not yet implemented'
+			// }
 		}
 	}
 };
@@ -90,7 +94,10 @@ communicator = function () {
 
 	return {
 		log_in: function(mail, password, success_fn, failure_fn) {
-			session.log_in(mail, password, success_fn, failure_fn)
+			session.log_in(mail, password, success_fn, failure_fn);
+		},
+		log_out: function() {
+			session.log_out();
 		},
 
 		create: function (model, data) {
@@ -147,4 +154,6 @@ garciac.log_in('ukko', '1234')
 log = function (response) {
 	console.log(response)
 }
-
+if(!localStorage.getItem('auth_token') && window.location.pathname != '/login') {
+  window.location = '/login';
+}

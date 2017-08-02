@@ -33,7 +33,7 @@ class Garciac < Sinatra::Base
 	end
 
 	get'/login' do
-		slim :login
+		slim :login, layout: false
 	end
 
 	post '/' do
