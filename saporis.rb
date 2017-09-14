@@ -3,7 +3,8 @@ require 'sinatra'
 require 'slim'
 
 class Saporis < Sinatra::Base
-
+	set :static, true
+	
 	get '/' do
 	  slim :index
 	end
