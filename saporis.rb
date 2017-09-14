@@ -4,7 +4,8 @@ require 'slim'
 
 class Saporis < Sinatra::Base
 	set :static, true
-	
+  	set :root, File.dirname(__FILE__)
+  	
 	get '/' do
 	  slim :index
 	end
