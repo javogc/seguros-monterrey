@@ -1,3 +1,3 @@
 require File.expand_path('saporis', File.dirname(__FILE__))
-require 'sprocket/railtie'
+set :public_folder, File.join(APP_ROOT, "public")
 run Saporis
