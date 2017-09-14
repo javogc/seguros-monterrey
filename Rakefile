@@ -1,4 +1,4 @@
 require 'sinatra/asset_pipeline/task'
-require './garciac'
+require './saporis'
 
-Sinatra::AssetPipeline::Task.define! Garciac
+Sinatra::AssetPipeline::Task.define! Saporis

@@ -1,2 +1,2 @@
-require File.expand_path('garciac', File.dirname(__FILE__))
-run Garciac
+require File.expand_path('saporis', File.dirname(__FILE__))
+run Saporis

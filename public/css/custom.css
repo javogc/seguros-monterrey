@@ -1,11 +1,61 @@
-h1{
-	font-family: Open Sans;
+@font-face { font-family: HarmoniaSans; 
+	src: url('../fonts/HarmoniaSansProCyr-Regular.otf') format("opentype"),
+	url('../fonts/HarmoniaSansProCyr-Regular.woff') format('woff');
 }
 
+@font-face { font-family: HarmoniaSans; 
+	src: url('../fonts/HarmoniaSansProCyr-Bold.otf') format("opentype"),
+	url('../fonts/HarmoniaSansProCyr-Bold.woff') format('woff');
+	font-weight: bold;
+}
+
+@font-face { font-family: HarmoniaSans; 
+	src: url('../fonts/HarmoniaSansProCyr-Italic.otf') format("opentype"),
+	url('../fonts/HarmoniaSansProCyr-Italic.woff') format('woff');
+	font-style: italic;
+}
+
+@font-face { font-family: HarmoniaSans; 
+	src: url('../fonts/HarmoniaSansProCyr-Light.otf') format("opentype"),
+	url('../fonts/HarmoniaSansProCyr-Light.woff') format('woff');
+	font-weight: lighter;
+}
+
+h1{
+	font-family: HarmoniaSans;
+	font-size: 50px;
+	color: #2FDABD;
+	font-weight: bold;
+	text-align: left;
+}
+#index_header_1{
+	display: inline-block;
+} 
+h2{
+	color: #2FDABD;
+	font-weight: bold;
+}
+h4{
+	color: #3935AE;
+}
+
+h3{
+	color: #2FDABD;
+	font-weight: bold;
+	font-size: 35px;
+}
 body{
-	font-family: Open Sans;
-	overflow-x: hidden;
-	background-color: #F1F1F1;
+	font-family: HarmoniaSans;
+	background-color: #fff;
+	overflow: auto;
+}
+
+#content {
+overflow: scroll;
+}
+p{
+	font-size: 15px;
+
 }
 
 .btn{
@@ -13,11 +63,15 @@ body{
 }
 
 .footer {
-  position: fixed;
+
   bottom: 0;
   width: 100%;
-  height: 60px;
-  background-color: #f5f5f5;
+  height: 100px;
+  background-color: #7485FC;
+  vertical-align: center;
+  overflow: scroll;
+  flex-shrink: 0;
+
 }
 
 .footer .container-fluid .text-muted {
@@ -34,8 +88,12 @@ body{
 	color: white;
 }
 
+.navbar-default {
+    background-color: #fff;
+    border-color: #fff;
+}
 .navbar.navbar-default{
-	background-color: #323232;
+	background-color: fff;
 	border-radius: 0;
 	height: 70px;
 }
@@ -44,30 +102,54 @@ h1{
 	text-align: center;
 }
 
-
-.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus{
-	background-color: #6A1383;
+.image_con{
+	padding-left: 0;
+    padding-right: 0;
 }
-
 .navbar-default .navbar-nav > li > a{
-	color: white;
+	color: #3935AE;
 	font-weight: bold; 
 	font-size: smaller;
 	text-align: center;
+	text-decoration: underline;
+	text-decoration-color: #75E4C2;
 }
 
 .navbar-default .navbar-brand{
-	color: white;
+	color: #3935AE;
+	padding-top: 20px;
+	padding-left: 150px;
+}
+
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+    border-color: #e7e7e7;
+    padding-top: 40px;
 }
 
 .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
-    color: white;
+    color: #3935AE;
     font-size: smaller;
     text-align: center;
 }
 
-.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus{
-	color: white;
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+    color: #3935AE;
+    background-color: #2FDABD;
+}
+
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+    color: #3935AE;
+}
+
+.navbar-right .dropdown-menu {
+	right: initial;
+    left: auto;
+}
+
+.navbar-right {
+    float: right !important;
+    margin-right: -15px;
+    padding-right: 130px;
 }
 
 .detail-button{
@@ -77,4 +159,175 @@ h1{
 .dependency-button{
 	background-color: #E56D3B;
 	text-align: center;
+}
+#accordion{
+	overflow: scroll;
+}
+.text-muted {
+    color: #fff;
+}
+
+.row {
+    margin-right: -15px;
+    margin-left: -15px;
+    padding-top: 35px;
+}
+#img-index{
+	max-width: 623.25px;
+	max-height: 325.5px;
+}
+#logos{
+	max-width: 100px;
+	max-height: 100px;
+	display: inline-block;
+	margin-right: 30px;
+}
+
+#navbar_logo{
+	max-width: 70px;
+	max-height: 70px;
+}
+.row .logo_row{
+	text-align: center;
+} 
+
+.container .logo_container{
+	background-color: #EDECED;
+	width: 100%;
+	height: 350px;
+}	
+
+#index_paragraph{
+	color: #5A67FF;
+	font-size: 20px;
+	text-align: center;
+}
+
+.product_detail{
+	color: #5A67FF;
+	display: inline;
+}
+
+.panel-default > .panel-heading {
+    color: #5A67FF;
+    background-color: #ffffff;
+    border-color: #ddd;
+    height: 80px;
+}
+
+.panel-title {
+    margin-top: 10px;
+    margin-bottom: 0;
+    font-size: 28px;
+    color: #5A67FF;
+    font-weight: bold;
+    background-color: white;
+    position: center;
+}
+
+.panel-group .panel-heading + .panel-collapse > .panel-body, .panel-group .panel-heading + .panel-collapse > .list-group {
+   border-top: 1px
+}
+
+#logos_marcas{
+	max-width: 100px;
+	max-height: 100px;
+	display: inline-block;
+}
+
+.marcas_element{
+	vertical-align: middle;
+}
+
+#index_header{
+    color: #3935AE;
+    font-weight: bolder;
+    display: inline-block;
+}
+
+.container {
+    width: 100%;
+}
+
+#map{
+	text-align: center;
+}
+
+.product_tile{
+	text-align: left;
+}
+
+.product_name{
+	color: #3935AE;
+	text-align: left;
+}
+.dropdown-menu{
+	background-color: #2FDABD; 
+}
+.dropdown-menu > li > a {
+    display: block;
+    padding: 3px 20px;
+    clear: both;
+    font-weight: normal;
+    line-height: 1.42857143;
+    color: #fff;
+    white-space: nowrap;
+    border: hidden;
+   
+}
+
+.carousel {
+    height: 500px;
+    margin-bottom: 60px;
+    width: 50%;
+    display: block;
+    margin: auto;
+}
+/* Since positioning the image, we need to help out the caption */
+ .carousel-caption {
+    z-index: 10;
+}
+/* Declare heights because of positioning of img element */
+ .carousel .item {
+    width: 100%;
+    height: 500px;
+    background-color: #777;
+}
+.carousel-inner > .item > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    height: 500px;
+}
+
+.col-xs-6 {
+    width: 50%;
+    display: inline-block;
+    padding-left: 150px;
+}
+
+#image_page{
+	width: 100%
+	display: inline-block;
+}
+
+@media (min-width: 992px)
+grid-framework.less:48
+.col-md-12 {
+    width: 100%;
+    display: inline-block;
+    padding: inherit;
+}
+
+@media (min-width: 768px) {
+    .carousel-caption p {
+        margin-bottom: 20px;
+        font-size: 21px;
+        line-height: 1.4;
+    }
+}
+
+@media only screen and (max-width : 480px) {
+	.
 }
