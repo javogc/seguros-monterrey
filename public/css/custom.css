@@ -167,7 +167,7 @@ p{
 .navbar-right {
     float: right !important;
     margin-right: -15px;
-    padding-right: 130px;
+    background-color: #E5E5E5;
 }
 
 .detail-button{
@@ -354,6 +354,12 @@ grid-framework.less:48
     width: 50%;
     display: inline-block;
     padding-left: 150px;
+	}
+	.navbar-right {
+    float: right !important;
+    margin-right: -15px;
+    padding-right: 130px;
+    background-color: #fff;
 	}
 }
 
