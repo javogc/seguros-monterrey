@@ -98,10 +98,6 @@ p{
 	height: 70px;
 }
 
-h1{
-	text-align: center;
-}
-
 .image_con{
 	padding-left: 0;
     padding-right: 0;
@@ -312,6 +308,13 @@ h1{
 	display: inline-block;
 }
 
+#productos_header{
+	text-align: unset;
+}
+#products_subtext{
+	font-style: italic;
+	
+}
 @media (min-width: 992px)
 grid-framework.less:48
 .col-md-12 {
