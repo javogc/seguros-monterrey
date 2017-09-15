@@ -117,6 +117,28 @@ p{
 	padding-left: 150px;
 }
 
+@media only screen and (max-width: 750px) {
+    .navbar-default .navbar-brand{
+	color: #3935AE;
+	padding-left: 0px;
+	}
+
+	.navbar-default .navbar-toggle {
+	    border-color: #fff;
+	    padding-top: 30px;
+	}
+	.navbar-default .navbar-toggle .icon-bar {
+	    background-color: #75E4C2;
+	    height: 4px;
+	    width: 30px;
+
+	}
+	img-index{
+		max-width: 250px;
+
+	}
+
+}
 .navbar-default .navbar-collapse, .navbar-default .navbar-form {
     border-color: #e7e7e7;
     padding-top: 40px;
@@ -169,7 +191,7 @@ p{
     padding-top: 35px;
 }
 #img-index{
-	max-width: 623.25px;
+	max-width: 400.25px;
 	max-height: 325.5px;
 }
 #logos{
@@ -300,7 +322,6 @@ p{
 .col-xs-6 {
     width: 50%;
     display: inline-block;
-    padding-left: 150px;
 }
 
 #image_page{
@@ -313,7 +334,7 @@ p{
 }
 #products_subtext{
 	font-style: italic;
-	
+
 }
 @media (min-width: 992px)
 grid-framework.less:48
@@ -329,6 +350,11 @@ grid-framework.less:48
         font-size: 21px;
         line-height: 1.4;
     }
+    .col-xs-6 {
+    width: 50%;
+    display: inline-block;
+    padding-left: 150px;
+	}
 }
 
 @media only screen and (max-width : 480px) {
