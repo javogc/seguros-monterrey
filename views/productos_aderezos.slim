@@ -1,8 +1,8 @@
+img.img-responsive  src="img/productos_aderezo.jpg"
 .container
-	.row
+	.row#page_row
 	  .col-sm-12
-	  img.img-responsive  src="img/productos_aderezo.jpg"
-	.row
+	.row#page_row
 	  h1
 		span.product_title Productos: 
 		span.product_name Aderezos
@@ -22,3 +22,28 @@
       | • Tortas
       br/
       | • Ensaladas
+
+.container#carousel_container
+  #myCarousel.carousel.slide data-ride="carousel" 
+    /! Indicators
+    ol.carousel-indicators
+      li.active data-slide-to="0" data-target="#myCarousel" 
+      li data-slide-to="1" data-target="#myCarousel" 
+      li data-slide-to="2" data-target="#myCarousel" 
+    /! Wrapper for slides
+    .carousel-inner
+      .item.active
+        img.center-block alt="Catsup" src="img/Productos/Mayonesa_01.png" /
+        .carousel-caption Salsa tipo catsup ........
+      .item
+        img#carousel_image alt="Catsup_2" src="img/Productos/Mayonesa_02.png" /
+      .item
+        img#carousel_image alt=("Catsup_3") src="img/Productos/Mayonesa_03.png"  /
+    /! Left and right controls
+    a.left.carousel-control data-slide="prev" href="#myCarousel" 
+      span.glyphicon.glyphicon-chevron-left
+      span.sr-only Previous
+    a.right.carousel-control data-slide="next" href="#myCarousel" 
+      span.glyphicon.glyphicon-chevron-right
+      span.sr-only Next
+

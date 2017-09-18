@@ -114,7 +114,6 @@ p{
 .navbar-default .navbar-brand{
 	color: #3935AE;
 	padding-top: 20px;
-	padding-left: 150px;
 }
 
 @media only screen and (max-width: 750px) {
@@ -137,7 +136,20 @@ p{
 		max-width: 250px;
 
 	}
+	#carousel_container{
+		padding-bottom: 20px;
+	}
 
+	#carousel_image{
+		max-width: 50px;
+		min-height: 50px;
+	}
+	
+	.navbar-default .navbar-brand{
+	color: #3935AE;
+	padding-top: 20px;
+	
+}
 }
 .navbar-default .navbar-collapse, .navbar-default .navbar-form {
     border-color: #e7e7e7;
@@ -178,9 +190,7 @@ p{
 	background-color: #E56D3B;
 	text-align: center;
 }
-#accordion{
-	overflow: scroll;
-}
+
 .text-muted {
     color: #fff;
 }
@@ -212,8 +222,9 @@ p{
 .container .logo_container{
 	background-color: #EDECED;
 	width: 100%;
-	height: 350px;
-}	
+	height: 450px;
+}
+
 
 #index_paragraph{
 	color: #5A67FF;
@@ -344,6 +355,40 @@ grid-framework.less:48
     padding: inherit;
 }
 
+.carousel {
+    height: 200px;
+    margin-bottom: 60px;
+    width: 80%;
+    display: block;
+    margin: auto;
+}
+
+.carousel-inner > .item > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    height: 500px;
+    background: white;
+}
+
+.carousel-inner {
+    /* width: 100%; */
+    width: ;
+    height: 100%;
+    overflow: hidden;
+    display: inline-block;
+    /* margin-right: 70px; */
+}
+
+.carousel-indicators .active {
+    width: 12px;
+    height: 12px;
+    margin: 0;
+    background-color: #7485FC;
+}
+
+
 @media (min-width: 768px) {
     .carousel-caption p {
         margin-bottom: 20px;
@@ -353,7 +398,7 @@ grid-framework.less:48
     .col-xs-6 {
     width: 50%;
     display: inline-block;
-    padding-left: 150px;
+    padding: unset;
 	}
 	.navbar-right {
     float: right !important;
@@ -361,8 +406,105 @@ grid-framework.less:48
     padding-right: 130px;
     background-color: #fff;
 	}
+
+	
+
+	.carousel {
+    height: 500px;
+    margin-bottom: 60px;
+    width: 80%;
+    display: block;
+    margin: auto;
+}
+	#carousel_container{
+		padding-bottom: 20px;
+		padding-top: 20px;
+	}
+	.carousel-inner {
+    /* width: 100%; */
+    width: 40%;
+    height: 100%;
+    overflow: hidden;
+    display: inline-block;
+    margin-left: 300px;
+    /* margin-right: 70px; */
+	}
+
+	.carousel-control {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 15%;
+    font-size: 20px;
+    color: #2FDABD;
+    text-align: center;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, .6);
+    background-color: rgba(0, 0, 0, 0);
+    filter: alpha(opacity=50);
+    opacity: .5;
+	}
+
+	body .container .logo_container{
+	background-color: #EDECED;
+	width: 100%;
+	height: 350px;
+	margin-left: unset; 
+	margin-right: unset; 
+	}	
+/*
+	body{
+	font-family: HarmoniaSans;
+	background-color: #fff;
+	overflow: auto;
+	margin-left: 10%;
+	margin-right: 10%;
+	}*/
+	#page_row{
+		margin-right: 10%;
+		margin-left: 10%;
+	}
+	#accordion{
+	overflow: scroll;
+	margin-right: 10%;
+	margin-left: 10%;
+	}
+
+	.navbar.navbar-default {
+    background-color: fff;
+    border-radius: 0;
+    height: 70px;
+    margin-right: 10%;
+	margin-left: 10%;
+	}
+
+	.img-responsive, .thumbnail > img, .thumbnail a > img, .carousel-inner > .item > img, .carousel-inner > .item > a > img {
+    display: inline-block;
+    /* max-width: 100%; */
+    width: 100%;
+    height: auto;
+	}
+	#index_row{
+		    margin-right: 4%;
+    margin-left: 4%;
+    padding-top: 35px;
+	}
+
+	#index_container{
+		padding: unset;
+	}
 }
 
-@media only screen and (max-width : 480px) {
-	.
+.map-responsive{
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+}
+.map-responsive iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
 }

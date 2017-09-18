@@ -1,8 +1,8 @@
+img.img-responsive  src="img/productos_mostaza.jpg"
 .container
-  .row
+  .row#page_row
     .col-sm-12
-    img.img-responsive  src="img/productos_mostaza.jpg"
-  .row
+  .row#page_row
       h1
         span.product_title Productos: 
         span.product_name Mostaza
@@ -21,3 +21,23 @@
         | • Bocadillos
         br/
         | • Hot – dogs
+.container#carousel_container
+  #myCarousel.carousel.slide data-ride="carousel" 
+    /! Indicators
+    ol.carousel-indicators
+      li.active data-slide-to="0" data-target="#myCarousel" 
+      li data-slide-to="1" data-target="#myCarousel" 
+    /! Wrapper for slides
+    .carousel-inner
+      .item.active
+        img.center-block alt="Mostaza_1" src="img/Productos/Mostaza_01.png" /
+        .carousel-caption TEXTO TEXTO ........
+      .item
+        img#carousel_image alt="Mostaza_2" src="img/Productos/Mostaza_02.png" /
+    /! Left and right controls
+    a.left.carousel-control data-slide="prev" href="#myCarousel" 
+      span.glyphicon.glyphicon-chevron-left
+      span.sr-only Previous
+    a.right.carousel-control data-slide="next" href="#myCarousel" 
+      span.glyphicon.glyphicon-chevron-right
+      span.sr-only Next

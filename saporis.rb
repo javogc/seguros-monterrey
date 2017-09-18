@@ -1,6 +1,8 @@
 require 'rubygems'
 require 'sinatra'
 require 'slim'
+require 'pony'
+require 'haml'
 
 class Saporis < Sinatra::Base
 	set :static, true
@@ -42,14 +44,34 @@ class Saporis < Sinatra::Base
 		slim :productos_vinagres
 	end
 
-	get'/marcas'do
+	get'/marcas' do
 		slim :marcas
 	end
 
-	get'/contacto'do
+	get'/contacto' do
 		slim :contacto
 	end
 
+	get '/contact' do
+		  return haml :contact 
+	end
+
+	post '/contact' do
+
+		Pony.mail :to => 'javiergc93@gmail.com',
+              :from => params[:email],
+              :subject =>  params[:subject],
+              :body =>  params[:email] +" wrote:\n" + params[:message],
+              :via => :smtp,
+              :via_options => {
+                  :address              => 'smtp.gmail.com',
+                  :port                 => '587',
+                  :user_name                 => 'javiergc93@gmail.com',
+                  :password             => 'tpo3wsuf753159',
+                  :authentication       => :plain, 
+                  :domain               => "localhost.localdomain"
+                } 
+	end
 	get'/aviso_de_privacidad'do
 		slim :privacidad
 	end
