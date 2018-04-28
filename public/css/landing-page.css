@@ -1,0 +1,268 @@
+/*!
+ * Start Bootstrap - Landing Page (https://startbootstrap.com/template-overviews/landing-page)
+ * Copyright 2013-2017 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-landing-page/blob/master/LICENSE)
+ */
+
+body, html {
+  width: 100%;
+  height: 100%;
+}
+
+body, h1, h2, h3, h4, h5, h6 {
+/*  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+*/  
+  /*font-family: 'Raleway', sans-serif;
+*/
+
+}
+
+
+
+.style_propuestas{
+  font-weight: lighter;
+}
+.intro-header {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  text-align: center;
+  color: #f8f8f8;
+  background: url(../img/index.jpg) no-repeat center center;
+  background-size: cover;
+  height: 600px;
+}
+.intro-header-salud {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  text-align: center;
+  color: #f8f8f8;
+  background: url(../img/productos.jpg) no-repeat center center;
+  background-size: cover;
+  height: 600px;
+}
+
+
+
+.intro-message {
+  position: relative;
+  /*padding-top: 42%;*/
+/*  padding-bottom: 20%;
+*/}
+
+.intro-message h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 4.8vw;
+    margin-top: .3em;
+    -moz-font-feature-settings: "salt", "liga", "clig", "tnum";
+    -webkit-font-feature-settings: "salt", "liga", "clig", "tnum";
+    font-feature-settings: "salt", "liga", "clig", "tnum";
+    font-variant-ligatures: common-ligatures;
+    font-variant-numeric: tabular-nums;
+    text-align: center;
+}
+
+.intro-divider {
+  width: 400px;
+  border-top: 1px solid #f8f8f8;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.intro-message>h3 {
+}
+
+.intro-social-buttons i {
+  font-size: 80%;
+}
+
+.lead{
+
+  color: #051C33;
+  font-size: 1rem;
+}
+
+#link_auxiliares{
+  font-size: 1.5em;
+  margin-bottom: 20px;
+}
+
+#seccion{
+  font-size: 1.5em;
+}
+
+
+.index_section{
+  background: url(../img/aliendeltoro2.jpg) no-repeat center center;
+}
+@media(max-width:767px) {
+  .intro-message {
+   /* padding-bottom: 15%;*/
+   padding-top: none;
+  }
+  .intro-message>h1 {
+    font-size: 1.8em;
+  }
+  ul.intro-social-buttons>li {
+    /*display: block;*/
+    margin-bottom: 20px;
+    padding: 0;
+  }
+  ul.intro-social-buttons>li:last-child {
+    margin-bottom: 0;
+  }
+  .intro-divider {
+    width: 100%;
+  }
+
+  .section-heading {
+    margin-bottom: none;
+    color: #051C33;
+    text-align: center;
+  }
+  .header_menu{
+    margin-top: 20%
+  }
+}
+
+.network-name {
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 2px;
+}
+
+.content-section-a {
+  padding: 50px 0;
+  /*background-color: #FFFBE6;*/
+  background-color: #F8F8F8;
+  border-bottom: 1px solid #e7e7e7;
+}
+
+.content-section-b {
+  padding: 50px 0;
+/*  border-top: 1px solid #e7e7e7;*/
+  border-bottom: 1px solid #e7e7e7;
+  /*background-color: #FFFBE6;*/
+  background-color: #F8F8F8;
+}
+
+.section-heading {
+  margin-bottom: 30px;
+  color: #051C33;
+  text-align: center;
+}
+
+.section-heading-spacer {
+  float: left;
+  width: 200px;
+  border-top: 3px solid #e7e7e7;
+}
+
+.banner {
+  padding: 100px 0;
+  color: #f8f8f8;
+  background: url(../img/comunidad.jpg) no-repeat center center;
+  background-size: cover;
+}
+
+.banner h2 {
+  margin: 0;
+  font-size: 3em;
+}
+
+.banner ul {
+  margin-bottom: 0;
+}
+
+.banner-social-buttons {
+  float: right;
+  margin-top: 0;
+}
+
+@media(max-width:1199px) {
+  ul.banner-social-buttons {
+    float: left;
+    margin-top: 15px;
+  }
+}
+
+@media(max-width:767px) {
+  .banner h2 {
+    margin: 0;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
+    font-size: 3em;
+  }
+ /* ul.banner-social-buttons>li {
+    display: block;
+    margin-bottom: 20px;
+    padding: 0;
+  }*/
+ /* ul.banner-social-buttons>li:last-child {
+    margin-bottom: 0;
+  }*/
+}
+
+footer {
+  padding: 50px 0;
+  background-color: white;
+  color: #051C33;
+  padding-left: 15px;
+}
+
+p.copyright {
+  margin: 15px 0 0;
+}
+
+#map {
+  height: 80vh;
+  width: 100%;
+}
+
+.bg-light {
+    background-color: white!important;
+}
+
+.navbar{
+  height: 5em;
+}
+
+.container{
+  max-width: 100%;
+}
+
+.social_networks{
+    color: #051C33;
+    margin-left: .2em;
+    margin-right: .2em;
+    font-size: 1.4em;
+}
+
+.fa {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+}
+
+.nav-link{
+  text-transform: uppercase;
+  color: white;
+  font-size: 1em;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: #051C33;
+}
+
+.navbar-light .navbar-brand{
+  color: white;
+  background-color: #051C33;
+
+}
+
+
+
+}
